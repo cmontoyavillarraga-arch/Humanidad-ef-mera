@@ -1,4 +1,4 @@
-/* --- RESETEO BÁSICO Y FUENTE GENERAL --- */
+/* --- RESETEO BÁSICO --- */
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +6,16 @@
 }
 
 body {
-  background-color: #0a0a0a; /* negro profundo */
-  color: #eaeaea; /* gris claro, no blanco puro */
-  font-family: 'Oswald', sans-serif; /* fuente base para párrafos */
+  background-color: #0a0a0a;
+  color: #eaeaea;
+  font-family: 'Oswald', sans-serif;
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-/* --- ESTILOS DE SECCIONES --- */
+/* --- SECCIONES --- */
 section {
-  min-height: 100vh; /* cada sección ocupa toda la pantalla */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +25,7 @@ section {
   transition: background 1s ease-in-out;
 }
 
-/* --- TÍTULOS PRINCIPALES --- */
+/* --- TÍTULOS H1 (TIPOGRAFÍA Spell of Asia) --- */
 h1 {
   font-family: 'Spell of Asia', cursive;
   font-size: 3rem;
@@ -35,7 +35,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-/* --- BOTÓN INICIAL --- */
+/* --- BOTÓN --- */
 .btn-empezar {
   background: transparent;
   border: 2px solid #f0e6d2;
@@ -63,7 +63,7 @@ p {
   text-align: justify;
 }
 
-/* --- EFECTOS DE COLOR ENTRE SECCIONES (para dar ritmo visual) --- */
+/* --- FONDOS POR SECCIÓN (degradados suaves) --- */
 .inicio {
   background: linear-gradient(to bottom, #0a0a0a, #1b1b1b);
 }
@@ -86,18 +86,6 @@ p {
 .parrafo-12 { background: linear-gradient(to bottom, #181818, #0a0a0a); }
 .parrafo-13 { background: linear-gradient(to bottom, #101010, #181818); }
 .parrafo-14 { background: linear-gradient(to bottom, #0a0a0a, #000000); }
-
-/* --- EFECTO DE TRANSICIÓN AL HACER SCROLL (opcional si luego agregas JS) --- */
-section {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 
