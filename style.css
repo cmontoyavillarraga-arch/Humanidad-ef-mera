@@ -1,96 +1,103 @@
-/* ==============================
-   CONFIGURACIÓN GENERAL
-============================== */
-html, body {
+/* --- RESETEO BÁSICO Y FUENTE GENERAL --- */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Oswald', sans-serif; /* Fuente base para los textos */
-  background-color: #f8f8f8;
-  color: #222;
-  scroll-behavior: smooth;
-}
-
-/* Cada sección ocupa el alto total de la pantalla */
-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
   box-sizing: border-box;
 }
 
-/* ==============================
-   ESTILO DE LOS TÍTULOS
-============================== */
-h1 {
-  font-family: 'Story Script', cursive; /* Cambia aquí si prefieres otra */
-  font-size: 3rem;
+body {
+  background-color: #0a0a0a; /* negro profundo */
+  color: #eaeaea; /* gris claro, no blanco puro */
+  font-family: 'Oswald', sans-serif; /* fuente base para párrafos */
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* --- ESTILOS DE SECCIONES --- */
+section {
+  min-height: 100vh; /* cada sección ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
   text-align: center;
-  line-height: 1.3;
-  color: #222;
-  margin-bottom: 2rem;
+  transition: background 1s ease-in-out;
+}
+
+/* --- TÍTULOS PRINCIPALES --- */
+h1 {
+  font-family: 'Spell of Asia', cursive;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #f0e6d2;
+  text-shadow: 0 0 10px rgba(255, 245, 200, 0.4);
+  margin-bottom: 40px;
+}
+
+/* --- BOTÓN INICIAL --- */
+.btn-empezar {
+  background: transparent;
+  border: 2px solid #f0e6d2;
+  color: #f0e6d2;
+  font-family: 'Oswald', sans-serif;
+  padding: 15px 40px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s ease;
   letter-spacing: 1px;
 }
 
-/* ==============================
-   BOTÓN INICIAL
-============================== */
-.btn-empezar {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  font-family: 'Oswald', sans-serif;
-}
-
 .btn-empezar:hover {
-  background-color: #333;
+  background: #f0e6d2;
+  color: #0a0a0a;
   transform: scale(1.05);
 }
 
-/* ==============================
-   SECCIONES ESPECÍFICAS
-============================== */
+/* --- PÁRRAFOS --- */
+p {
+  max-width: 900px;
+  font-size: 1.2rem;
+  color: #d8d8d8;
+  opacity: 0.9;
+  text-align: justify;
+}
+
+/* --- EFECTOS DE COLOR ENTRE SECCIONES (para dar ritmo visual) --- */
 .inicio {
-  background: linear-gradient(180deg, #dfefff, #ffffff);
+  background: linear-gradient(to bottom, #0a0a0a, #1b1b1b);
 }
 
 .humanidad {
-  background-color: #f0e6ff;
+  background: radial-gradient(circle at center, #1c1b18, #0a0a0a);
 }
 
-/* Ejemplo: alternar fondos suaves para cada párrafo */
-.parrafo-1 { background-color: #fff; }
-.parrafo-2 { background-color: #f7f7f7; }
-.parrafo-3 { background-color: #fff; }
-.parrafo-4 { background-color: #f7f7f7; }
-.parrafo-5 { background-color: #fff; }
-.parrafo-6 { background-color: #f7f7f7; }
-.parrafo-7 { background-color: #fff; }
-.parrafo-8 { background-color: #f7f7f7; }
-.parrafo-9 { background-color: #fff; }
-.parrafo-10 { background-color: #f7f7f7; }
-.parrafo-11 { background-color: #fff; }
-.parrafo-12 { background-color: #f7f7f7; }
-.parrafo-13 { background-color: #fff; }
-.parrafo-14 { background-color: #f7f7f7; }
+.parrafo-1 { background: linear-gradient(to bottom, #101010, #181818); }
+.parrafo-2 { background: linear-gradient(to bottom, #181818, #101010); }
+.parrafo-3 { background: linear-gradient(to bottom, #0d0d0d, #141414); }
+.parrafo-4 { background: linear-gradient(to bottom, #141414, #0d0d0d); }
+.parrafo-5 { background: linear-gradient(to bottom, #101010, #1b1b1b); }
+.parrafo-6 { background: linear-gradient(to bottom, #0a0a0a, #151515); }
+.parrafo-7 { background: linear-gradient(to bottom, #0d0d0d, #1b1b1b); }
+.parrafo-8 { background: linear-gradient(to bottom, #141414, #0a0a0a); }
+.parrafo-9 { background: linear-gradient(to bottom, #0a0a0a, #1a1a1a); }
+.parrafo-10 { background: linear-gradient(to bottom, #181818, #0a0a0a); }
+.parrafo-11 { background: linear-gradient(to bottom, #0a0a0a, #181818); }
+.parrafo-12 { background: linear-gradient(to bottom, #181818, #0a0a0a); }
+.parrafo-13 { background: linear-gradient(to bottom, #101010, #181818); }
+.parrafo-14 { background: linear-gradient(to bottom, #0a0a0a, #000000); }
 
-/* ==============================
-   ESTILO DE PÁRRAFOS
-============================== */
-p {
-  max-width: 800px;
-  font-size: 1.2rem;
-  line-height: 1.8;
-  text-align: center;
-  color: #333;
-  margin: 0 auto;
+/* --- EFECTO DE TRANSICIÓN AL HACER SCROLL (opcional si luego agregas JS) --- */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
