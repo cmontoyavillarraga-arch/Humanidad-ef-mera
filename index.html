@@ -5,166 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Humanidad efímera</title>
 
-  <!-- Fuente Spell of Asia -->
-  <link href="https://fonts.cdnfonts.com/css/spell-of-asia" rel="stylesheet">
-
-  <style>
-    /* ============================
-       ESTILOS GLOBALES
-    ============================ */
-    @import url('https://fonts.cdnfonts.com/css/spell-of-asia');
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Spell of Asia', sans-serif;
-      color: #f7f7f7;
-      background: #0b0f14;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    /* ============================
-       VIDEO DE FONDO
-    ============================ */
-    video.fondo {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-      opacity: 0.35; /* controla la intensidad del video */
-      filter: blur(2px);
-    }
-
-    /* ============================
-       SECCIÓN DE INICIO
-    ============================ */
-    .inicio {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px;
-      backdrop-filter: blur(3px);
-    }
-
-    .inicio h1 {
-      font-size: 40px;
-      line-height: 1.5;
-      color: #e3f2ff;
-      text-shadow: 0 0 25px rgba(200, 230, 255, 0.5);
-      margin-bottom: 50px;
-    }
-
-    .btn-empezar {
-      font-family: 'Spell of Asia', sans-serif;
-      font-size: 22px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      color: #fff;
-      padding: 14px 40px;
-      border-radius: 40px;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      letter-spacing: 1px;
-    }
-
-    .btn-empezar:hover {
-      background: rgba(255, 255, 255, 0.25);
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-    }
-
-    /* ============================
-       TÍTULO HUMANIDAD
-    ============================ */
-    .humanidad {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(10,15,20,0.6);
-      text-align: center;
-    }
-
-    .humanidad h1 {
-      font-size: 70px;
-      color: #d8eaff;
-      text-shadow: 0 0 30px rgba(180, 220, 255, 0.4);
-      letter-spacing: 3px;
-    }
-
-    /* ============================
-       PÁRRAFOS
-    ============================ */
-    section[class^="parrafo-"] {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 80px 15%;
-      background: rgba(15, 20, 25, 0.6);
-      transition: background 1s ease;
-    }
-
-    section[class^="parrafo-"]:nth-child(odd) {
-      background: rgba(20, 25, 35, 0.6);
-    }
-
-    section[class^="parrafo-"] p {
-      font-size: 26px;
-      line-height: 1.7;
-      color: #f0f6ff;
-      max-width: 900px;
-      text-align: justify;
-      opacity: 0.95;
-      text-shadow: 0 0 10px rgba(255,255,255,0.1);
-      transform: translateY(30px);
-      opacity: 0;
-      transition: opacity 1.5s ease, transform 1.5s ease;
-    }
-
-    section[class^="parrafo-"].visible p {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-  </style>
+  <!-- Conexión con el CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- 🎥 VIDEO DE FONDO -->
-  <video class="fondo" autoplay muted loop playsinline>
-    <source src="tu-video.mp4" type="video/mp4">
-    Tu navegador no soporta videos en HTML5.
-  </video>
-
-  <!-- 🌬️ PRIMERA SECCIÓN -->
+  <!-- Primera sección -->
   <section class="inicio">
     <h1>
       MOMENTO DE DESCANSO,<br>
       SUMÉRGETE EN LA HISTORIA<br>
       Y DÉJATE LLEVAR POR EL VIENTO.
     </h1>
-    <button class="btn-empezar">DALE CLICK PARA EMPEZAR</button>
+
+    <button class="btn-empezar">
+      DALE CLICK PARA EMPEZAR
+    </button>
   </section>
 
-  <!-- 🫧 SEGUNDA SECCIÓN -->
+  <!-- Segunda sección -->
   <section class="humanidad">
     <h1>Humanidad efímera</h1>
   </section>
 
-  <!-- 📜 SECCIONES DE TEXTO -->
+  <!-- Párrafos -->
   <section class="parrafo-1">
     <p>
       Durante siglos, hombres y mujeres enunciaron sus secretos al vacío, donde nadie podía escucharlos.
@@ -197,7 +62,8 @@
 
   <section class="parrafo-5">
     <p>
-      Una ráfaga de viento le arrastra. En el aire, algo comienza a verse, una forma leve, apenas visible.
+      Una ráfaga de viento le arrastra.
+      En el aire, algo comienza a verse, una forma leve, apenas visible.
       Ya no es solo un suspiro.
     </p>
   </section>
@@ -213,7 +79,8 @@
 
   <section class="parrafo-7">
     <p>
-      Se adentra en el mar. La corriente la envuelve y la arrastra sin resistencia.
+      Se adentra en el mar.
+      La corriente la envuelve y la arrastra sin resistencia.
       Desciende entre sombras donde los colores laten como recuerdos, breves, casi extintos.
     </p>
   </section>
@@ -274,19 +141,9 @@
     </p>
   </section>
 
-  <!-- ✨ SCRIPT: animación al hacer scroll -->
-  <script>
-    const secciones = document.querySelectorAll('section[class^="parrafo-"]');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.3 });
+</body>
+</html>
 
-    secciones.forEach(sec => observer.observe(sec));
-  </script>
 
 </body>
 </html>
