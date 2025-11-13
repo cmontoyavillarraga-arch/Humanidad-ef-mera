@@ -1,2 +1,142 @@
+/* ============================
+   ESTILOS GLOBALES
+   ============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* fuente del sistema (sin importaciones externas) */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #f7f7f7;
+  background: #000000; /* fondo negro solicitado */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ============================
+   VIDEO DE FONDO (si lo usas)
+   ============================ */
+video.fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.35;     /* controla la intensidad del video */
+  filter: blur(2px);
+}
+
+/* ============================
+   SECCIÓN DE INICIO
+   ============================ */
+.inicio {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  backdrop-filter: blur(3px);
+}
+
+.inicio h1 {
+  font-size: 40px;
+  line-height: 1.5;
+  color: #e3f2ff;
+  text-shadow: 0 0 25px rgba(200, 230, 255, 0.15);
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+/* botón */
+.btn-empezar {
+  font-size: 22px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 1px;
+}
+
+.btn-empezar:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.06);
+}
+
+/* ============================
+   TÍTULO HUMANIDAD
+   ============================ */
+.humanidad {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.humanidad h1 {
+  font-size: 64px;
+  color: #d8eaff;
+  text-shadow: 0 0 30px rgba(180, 220, 255, 0.12);
+  letter-spacing: 2px;
+}
+
+/* ============================
+   PÁRRAFOS
+   ============================ */
+section[class^="parrafo-"] {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  background: rgba(0,0,0,0.6);
+  transition: background 1s ease;
+}
+
+section[class^="parrafo-"]:nth-child(odd) {
+  background: rgba(6, 6, 6, 0.6);
+}
+
+section[class^="parrafo-"] p {
+  font-size: 22px;
+  line-height: 1.7;
+  color: #f0f6ff;
+  max-width: 900px;
+  text-align: justify;
+  opacity: 0.95;
+  text-shadow: 0 0 8px rgba(255,255,255,0.03);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: opacity 1.2s ease, transform 1.2s ease;
+  letter-spacing: 0.2px;
+}
+
+section[class^="parrafo-"].visible p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================
+   ADAPTACIONES RESPONSIVAS
+   ============================ */
+@media (max-width: 900px) {
+  .humanidad h1 { font-size: 48px; }
+  .inicio h1 { font-size: 28px; }
+  section[class^="parrafo-"] p { font-size: 18px; padding: 40px 6%; }
+  .btn-empezar { font-size: 18px; padding: 12px 28px; }
+}
 
 
