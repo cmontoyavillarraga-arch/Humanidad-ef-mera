@@ -1,91 +1,59 @@
-/* --- RESETEO BÁSICO --- */
-* {
+/* Importación alternativa (por si no se carga el link del HTML) */
+@import url('https://fonts.cdnfonts.com/css/spell-of-asia');
+
+/* 🎭 Estilos generales */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: #0a0a0a;
-  color: #eaeaea;
-  font-family: 'Oswald', sans-serif;
-  line-height: 1.7;
-  overflow-x: hidden;
-}
-
-/* --- SECCIONES --- */
-section {
-  min-height: 100vh;
+  background: linear-gradient(135deg, #09141c, #304d63);
+  color: #fff;
+  font-family: 'Spell of Asia', sans-serif;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 5%;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
-  transition: background 1s ease-in-out;
 }
 
-/* --- TÍTULOS H1 (TIPOGRAFÍA Spell of Asia) --- */
+/* 💨 Contenedor principal */
+main {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+/* 🪶 Título */
 h1 {
-  font-family: 'Spell of Asia', cursive;
-  font-size: 3rem;
+  font-size: 60px;
+  margin-bottom: 10px;
   letter-spacing: 2px;
-  color: #f0e6d2;
-  text-shadow: 0 0 10px rgba(255, 245, 200, 0.4);
-  margin-bottom: 40px;
 }
 
-/* --- BOTÓN --- */
-.btn-empezar {
-  background: transparent;
-  border: 2px solid #f0e6d2;
-  color: #f0e6d2;
-  font-family: 'Oswald', sans-serif;
-  padding: 15px 40px;
-  border-radius: 40px;
+/* 🌫️ Texto */
+p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* 🔘 Botón */
+button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
   cursor: pointer;
   transition: 0.3s ease;
-  letter-spacing: 1px;
+  font-family: 'Spell of Asia', sans-serif;
 }
 
-.btn-empezar:hover {
-  background: #f0e6d2;
-  color: #0a0a0a;
+button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
 }
-
-/* --- PÁRRAFOS --- */
-p {
-  max-width: 900px;
-  font-size: 1.2rem;
-  color: #d8d8d8;
-  opacity: 0.9;
-  text-align: justify;
-}
-
-/* --- FONDOS POR SECCIÓN (degradados suaves) --- */
-.inicio {
-  background: linear-gradient(to bottom, #0a0a0a, #1b1b1b);
-}
-
-.humanidad {
-  background: radial-gradient(circle at center, #1c1b18, #0a0a0a);
-}
-
-.parrafo-1 { background: linear-gradient(to bottom, #101010, #181818); }
-.parrafo-2 { background: linear-gradient(to bottom, #181818, #101010); }
-.parrafo-3 { background: linear-gradient(to bottom, #0d0d0d, #141414); }
-.parrafo-4 { background: linear-gradient(to bottom, #141414, #0d0d0d); }
-.parrafo-5 { background: linear-gradient(to bottom, #101010, #1b1b1b); }
-.parrafo-6 { background: linear-gradient(to bottom, #0a0a0a, #151515); }
-.parrafo-7 { background: linear-gradient(to bottom, #0d0d0d, #1b1b1b); }
-.parrafo-8 { background: linear-gradient(to bottom, #141414, #0a0a0a); }
-.parrafo-9 { background: linear-gradient(to bottom, #0a0a0a, #1a1a1a); }
-.parrafo-10 { background: linear-gradient(to bottom, #181818, #0a0a0a); }
-.parrafo-11 { background: linear-gradient(to bottom, #0a0a0a, #181818); }
-.parrafo-12 { background: linear-gradient(to bottom, #181818, #0a0a0a); }
-.parrafo-13 { background: linear-gradient(to bottom, #101010, #181818); }
-.parrafo-14 { background: linear-gradient(to bottom, #0a0a0a, #000000); }
-
 
 
