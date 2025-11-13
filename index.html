@@ -1,115 +1,294 @@
-/* 🌬️ Importa la fuente por si el link del HTML falla */
-@import url('https://fonts.cdnfonts.com/css/spell-of-asia');
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Humanidad efímera</title>
 
-/* 🩵 Estilos generales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <!-- Fuente Spell of Asia -->
+  <link href="https://fonts.cdnfonts.com/css/spell-of-asia" rel="stylesheet">
 
-body {
-  font-family: 'Spell of Asia', sans-serif;
-  color: #f8f8f8;
-  background: linear-gradient(180deg, #0b0f14 0%, #1a2634 100%);
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
+  <style>
+    /* ============================
+       ESTILOS GLOBALES
+    ============================ */
+    @import url('https://fonts.cdnfonts.com/css/spell-of-asia');
 
-/* 🌫️ Primera sección (inicio) */
-.inicio {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 70%);
-  backdrop-filter: blur(5px);
-  padding: 40px;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.inicio h1 {
-  font-size: 40px;
-  letter-spacing: 2px;
-  line-height: 1.5;
-  margin-bottom: 50px;
-  color: #d0e6ff;
-  text-shadow: 0 0 20px rgba(200, 220, 255, 0.3);
-}
+    body {
+      font-family: 'Spell of Asia', sans-serif;
+      color: #f7f7f7;
+      background: #0b0f14;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
-.btn-empezar {
-  font-family: 'Spell of Asia', sans-serif;
-  font-size: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  padding: 14px 40px;
-  border-radius: 40px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  letter-spacing: 1px;
-}
+    /* ============================
+       VIDEO DE FONDO
+    ============================ */
+    video.fondo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.35; /* controla la intensidad del video */
+      filter: blur(2px);
+    }
 
-.btn-empezar:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-}
+    /* ============================
+       SECCIÓN DE INICIO
+    ============================ */
+    .inicio {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      backdrop-filter: blur(3px);
+    }
 
-/* 🌪️ Título de la segunda sección */
-.humanidad {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(180deg, #101820 0%, #192633 100%);
-}
+    .inicio h1 {
+      font-size: 40px;
+      line-height: 1.5;
+      color: #e3f2ff;
+      text-shadow: 0 0 25px rgba(200, 230, 255, 0.5);
+      margin-bottom: 50px;
+    }
 
-.humanidad h1 {
-  font-size: 70px;
-  color: #cde4ff;
-  text-shadow: 0 0 30px rgba(180, 220, 255, 0.4);
-  letter-spacing: 3px;
-}
+    .btn-empezar {
+      font-family: 'Spell of Asia', sans-serif;
+      font-size: 22px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #fff;
+      padding: 14px 40px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      letter-spacing: 1px;
+    }
 
-/* 📜 Párrafos */
-section[class^="parrafo-"] {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 15%;
-  background: linear-gradient(180deg, rgba(10,15,20,1) 0%, rgba(25,35,45,1) 100%);
-  transition: background 1s ease;
-}
+    .btn-empezar:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
 
-section[class^="parrafo-"]:nth-child(odd) {
-  background: linear-gradient(180deg, #0e141b 0%, #222f3b 100%);
-}
+    /* ============================
+       TÍTULO HUMANIDAD
+    ============================ */
+    .humanidad {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(10,15,20,0.6);
+      text-align: center;
+    }
 
-section[class^="parrafo-"] p {
-  font-size: 26px;
-  line-height: 1.7;
-  letter-spacing: 0.5px;
-  color: #e6f1ff;
-  text-shadow: 0 0 10px rgba(255,255,255,0.1);
-  max-width: 900px;
-  text-align: justify;
-  opacity: 0.95;
-}
+    .humanidad h1 {
+      font-size: 70px;
+      color: #d8eaff;
+      text-shadow: 0 0 30px rgba(180, 220, 255, 0.4);
+      letter-spacing: 3px;
+    }
 
-/* 🕊️ Pequeña animación de aparición */
-section[class^="parrafo-"] p {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 1.5s ease, transform 1.5s ease;
-}
+    /* ============================
+       PÁRRAFOS
+    ============================ */
+    section[class^="parrafo-"] {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 15%;
+      background: rgba(15, 20, 25, 0.6);
+      transition: background 1s ease;
+    }
 
-/* ✨ Cuando el párrafo entra en pantalla */
-section[class^="parrafo-"].visible p {
-  opacity: 1;
-  transform: translateY(0);
-}
+    section[class^="parrafo-"]:nth-child(odd) {
+      background: rgba(20, 25, 35, 0.6);
+    }
+
+    section[class^="parrafo-"] p {
+      font-size: 26px;
+      line-height: 1.7;
+      color: #f0f6ff;
+      max-width: 900px;
+      text-align: justify;
+      opacity: 0.95;
+      text-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transform: translateY(30px);
+      opacity: 0;
+      transition: opacity 1.5s ease, transform 1.5s ease;
+    }
+
+    section[class^="parrafo-"].visible p {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎥 VIDEO DE FONDO -->
+  <video class="fondo" autoplay muted loop playsinline>
+    <source src="tu-video.mp4" type="video/mp4">
+    Tu navegador no soporta videos en HTML5.
+  </video>
+
+  <!-- 🌬️ PRIMERA SECCIÓN -->
+  <section class="inicio">
+    <h1>
+      MOMENTO DE DESCANSO,<br>
+      SUMÉRGETE EN LA HISTORIA<br>
+      Y DÉJATE LLEVAR POR EL VIENTO.
+    </h1>
+    <button class="btn-empezar">DALE CLICK PARA EMPEZAR</button>
+  </section>
+
+  <!-- 🫧 SEGUNDA SECCIÓN -->
+  <section class="humanidad">
+    <h1>Humanidad efímera</h1>
+  </section>
+
+  <!-- 📜 SECCIONES DE TEXTO -->
+  <section class="parrafo-1">
+    <p>
+      Durante siglos, hombres y mujeres enunciaron sus secretos al vacío, donde nadie podía escucharlos.
+      Durante siglos, no supieron expresar sus sentimientos, y estos brotaron como manantiales hacia el mundo que los rodeaba.
+      Pero durante siglos, el mundo los escuchó y se impregnó de aquello que callaban.
+      Porque no hay forma de esconderle al mundo los ecos de la verdad.
+    </p>
+  </section>
+
+  <section class="parrafo-2">
+    <p>
+      En los confines del mundo, un ser sin cuerpo es guiado por el viento hacia los lugares donde aún habitan los ecos del pasado.
+      Ahí absorbe los recuerdos y emociones que los humanos dejaron atrás, hasta comprender que la humanidad es más compleja de lo que cualquier forma etérea podría soportar.
+    </p>
+  </section>
+
+  <section class="parrafo-3">
+    <p>
+      Entre las hojas altas de un pastizal infinito, el viento danza entre sus láminas.
+      Una voz sin cuerpo tararea y se deja llevar.
+    </p>
+  </section>
+
+  <section class="parrafo-4">
+    <p>
+      Planeando sobre los árboles y arrastrado por el viento llega a unas ruinas cubiertas de musgo.
+      Un destello amarillo parpadea entre las piedras, le llama. Al acercarse, el aire se vuelve cálido. Unas risas se escuchan seguidas por una frase perdida.
+    </p>
+  </section>
+
+  <section class="parrafo-5">
+    <p>
+      Una ráfaga de viento le arrastra. En el aire, algo comienza a verse, una forma leve, apenas visible.
+      Ya no es solo un suspiro.
+    </p>
+  </section>
+
+  <section class="parrafo-6">
+    <p>
+      El viento la lleva hasta una playa.
+      La deja entre las conchas, donde el aire vuelve a ser cálido.
+      Por un instante reconoce aquella sensación, pero el calor se quiebra: desde el mar llega un frío que la atraviesa.
+      “Así que esto es el miedo” murmura mientras observa el mar. Su silueta se condensa hasta volverse la de una mujer.
+    </p>
+  </section>
+
+  <section class="parrafo-7">
+    <p>
+      Se adentra en el mar. La corriente la envuelve y la arrastra sin resistencia.
+      Desciende entre sombras donde los colores laten como recuerdos, breves, casi extintos.
+    </p>
+  </section>
+
+  <section class="parrafo-8">
+    <p>
+      Ahí la presión comienza a crecer, no del agua, sino de algo más antiguo:
+      Un recuerdo que se ha hundido hasta estas profundidades.
+      Voces rotas, lloros, respiraciones entrecortadas resuenan a su alrededor.
+      El miedo se convierte en peso. Quiere ascender pero la memoria no la deja.
+    </p>
+  </section>
+
+  <section class="parrafo-9">
+    <p>
+      Emerge del mar y el viento la recoge una vez más.
+      Ahora su forma es más nítida, casi humana.
+      Llega a un campo de flores.
+      Allí siente de nuevo el dolor, pero distinto. Casi que hermoso, un nuevo orbe pero ahora de color morado la hace entender qué es la pérdida.
+    </p>
+  </section>
+
+  <section class="parrafo-10">
+    <p>
+      Desesperada por los sentimientos, corre en busca de refugio.
+      Entre árboles colosales, encuentra un claro donde la luz apenas toca el suelo.
+      Ahí, entre estos pequeños tubos de luz el aire se calma.
+      Por primera vez siente que puede respirar.
+    </p>
+  </section>
+
+  <section class="parrafo-11">
+    <p>
+      Ya casi completa, esta comienza a sentir tranquilidad y paz.
+      Un recuerdo de familia llega a ella y le permite descansar.
+    </p>
+  </section>
+
+  <section class="parrafo-12">
+    <p>
+      Decide caminar por su cuenta, ya no guiada por el viento.
+      En la cima de la montaña observa el pastizal donde todo comenzó.
+      De repente, un sentimiento de alivio la invade al ver algo conocido, un eco lejano de lo que fue.
+      Con él, llegan recuerdos de amigos y seres queridos, suaves y cálidos.
+    </p>
+  </section>
+
+  <section class="parrafo-13">
+    <p>
+      Decide bajar, ahí mira atrás y todo lo que vivió hasta ahora.
+      En silencio dice: “Solo los humanos son capaces de resistir tanto, de mantenerse enteros mientras el mundo los parte.”
+    </p>
+  </section>
+
+  <section class="parrafo-14">
+    <p>
+      Justo al decir esto el cuerpo que ya estaba formado casi a la perfección explota y se vuelve este mismo viento que alguna vez la guió.
+    </p>
+  </section>
+
+  <!-- ✨ SCRIPT: animación al hacer scroll -->
+  <script>
+    const secciones = document.querySelectorAll('section[class^="parrafo-"]');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    secciones.forEach(sec => observer.observe(sec));
+  </script>
+
+</body>
+</html>
 
 
